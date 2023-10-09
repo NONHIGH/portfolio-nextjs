@@ -1,0 +1,24 @@
+.Card-Container {
+	position: relative;
+	border: 0.35rem solid rgba(0, 0, 0, 0.125);
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	word-wrap: break-word;
+}
+
+.Card-Body {
+	position: relative;
+	padding: 0.5rem 1rem;
+}
+.Card-Header,
+.Card-Footer {
+	padding: 0.5rem 1rem;
+	background-color: rgba(222, 226, 230, 0.03);
+}
+.Card-Footer {
+	border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.Card-Header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}

@@ -1,0 +1,154 @@
+@import '../../styles/mixins.scss';
+
+.toggle{
+	display: none;
+}
+.burgerO{
+	cursor: pointer;
+}
+.burgerX{
+	cursor: pointer;
+}
+.logo{
+	cursor: pointer;
+}
+@include sm {
+	.Header {
+		background-color: #0077b6;
+		font-size: 1rem;
+		padding: 1rem;
+
+		.Navbar {
+			color: white;
+			.icons {
+				display: inline-flex;
+			}
+			.toggle:checked~.icons .burgerO{
+				display: none;
+			}
+			.icons .burgerX {
+				display: none;
+			}
+			.toggle:checked~.icons .burgerX{
+				display: block;
+			}
+			.logo {
+				width: 3rem;
+				height: 3rem;
+			}
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.NavLinks {
+				position: fixed;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				top: 5rem;
+				display: grid;
+				place-items: center;
+				background-color: #00b4d8;
+				height: 0;
+				overflow: hidden;
+				transition: .4s ease;
+				transform: translateY(0%);
+				li{
+					display: flex;
+
+					width: 100%;
+					justify-content: center;
+					a {
+						transition: border 1s;
+						border-radius: 0.3rem;
+						padding: 3%;
+						border: 0.1rem solid transparent;
+						&:hover {
+							border-color: #00b4d8;
+						}
+					}
+				}
+			}
+			.icons {
+				padding: 0 auto;
+			}
+			.toggle:checked~.NavLinks {
+				height: 15rem;
+			}
+		}
+	}
+}
+
+@include md {
+	.Header {
+		background: #0077b6;
+		font-size: 1rem;
+		padding: 1rem;
+		.Navbar {
+			.logo {
+				width: 100px;
+			}
+			display: flex;
+			justify-content: space-between;
+			.NavLinks {
+				display: flex;
+				gap: 1.5rem;
+				li {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-width: 100px;
+					a {
+						transition: border 1s;
+						border-radius: 0.3rem;
+						padding: 3%;
+						border: 0.1rem solid transparent;
+						&:hover {
+							border-color: #00b4d8;
+						}
+					}
+				}
+			}
+			.icons {
+				display: none;
+			}
+		}
+	}
+}
+
+@include lg {
+	.Header {
+		background: #0077b6;
+		font-size: 1rem;
+		padding: 1rem;
+
+		.Navbar {
+			.logo {
+				width: 100px;
+			}
+			display: flex;
+			justify-content: space-between;
+			.NavLinks {
+				display: flex;
+				gap: 1.5rem;
+				li {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-width: 100px;
+					transition: border 1s;
+					a {
+						border-radius: 0.3rem;
+						padding: 3%;
+						border: 0.1rem solid transparent;
+						&:hover {
+							border-color: #00b4d8;
+						}
+					}
+				}
+			}
+			.icons {
+				display: none;
+			}
+		}
+	}
+}
