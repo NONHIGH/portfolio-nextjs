@@ -1,40 +1,50 @@
 @import '../../styles/mixins.scss';
 
-.toggle{
+.Header {
+	background-color: #081445;
+	color: #dcdede;
+}
+
+.toggle {
 	display: none;
 }
-.burgerO{
+.burgerO,
+.burgerX {
+	height: 3rem;
+	width: 3rem;
+}
+
+.burgerO {
 	cursor: pointer;
 }
-.burgerX{
+.burgerX {
 	cursor: pointer;
 }
-.logo{
+.logo {
 	cursor: pointer;
 }
 @include sm {
 	.Header {
-		background-color: #0077b6;
 		font-size: 1rem;
 		padding: 1rem;
-		border-bottom: #03045E solid 2px;
+		border-bottom: #03045e solid 2px;
 		.Navbar {
-			color: white;
+			
 			.icons {
 				display: inline-flex;
 			}
-			.toggle:checked~.icons .burgerO{
+			.toggle:checked ~ .icons .burgerO {
 				display: none;
 			}
 			.icons .burgerX {
 				display: none;
 			}
-			.toggle:checked~.icons .burgerX{
+			.toggle:checked ~ .icons .burgerX {
 				display: block;
 			}
 			.logo {
-				width: 3rem;
-				height: 3rem;
+				width: 5rem;
+				height: 5rem;
 			}
 			display: flex;
 			justify-content: space-between;
@@ -45,27 +55,32 @@
 				right: 0;
 				left: 0;
 				bottom: 0;
-				top: 5rem;
+				top: 7rem;
 				display: grid;
 				place-items: center;
-				background-color: #00b4d8;
+				background-color: #081445;
+
 				height: 0;
 				overflow: hidden;
-				transition: .4s ease;
+				transition: 0.4s ease;
 				transform: translateY(0%);
-				li{
+
+				border-top: 2px solid rgba($color: rgba(2, 90, 255, 0.998), $alpha: 1);
+				border-bottom: 2px solid rgba($color: rgba(2, 90, 255, 0.998), $alpha: 1);
+				li {
 					display: flex;
 					width: 100%;
 					height: 100%;
 					justify-content: center;
-					border-bottom: 1px solid rgba($color: #02fbff32, $alpha: 1.0);
+					border-bottom: 1px solid
+						rgba($color: rgba(2, 90, 255, 0.998), $alpha: 1);
 					a {
-						transition: border 1s;
-						border-radius: 0.3rem;
+						width: 100%;
+						height: 100%;
+						text-align: center;
 						padding: 3%;
-						border: 0.1rem solid transparent;
 						&:hover {
-							border-color: #00b4d8;
+							color: #ffffff;
 						}
 					}
 				}
@@ -73,7 +88,7 @@
 			.icons {
 				padding: 0 auto;
 			}
-			.toggle:checked~.NavLinks {
+			.toggle:checked ~ .NavLinks {
 				height: 15rem;
 			}
 		}
@@ -82,7 +97,6 @@
 
 @include md {
 	.Header {
-		background: #0077b6;
 		font-size: 1rem;
 		padding: 1rem;
 		.Navbar {
@@ -100,12 +114,8 @@
 					justify-content: center;
 					min-width: 100px;
 					a {
-						transition: border 1s;
-						border-radius: 0.3rem;
-						padding: 3%;
-						border: 0.1rem solid transparent;
-						&:hover {
-							border-color: #00b4d8;
+						&:hover{
+							text-decoration: underline;
 						}
 					}
 				}
@@ -119,13 +129,12 @@
 
 @include lg {
 	.Header {
-		background: #0077b6;
 		font-size: 1rem;
 		padding: 1rem;
 
 		.Navbar {
 			.logo {
-				width: 100px;
+				width: 6.75rem;
 			}
 			display: flex;
 			justify-content: space-between;
@@ -137,13 +146,9 @@
 					align-items: center;
 					justify-content: center;
 					min-width: 100px;
-					transition: border 1s;
 					a {
-						border-radius: 0.3rem;
-						padding: 3%;
-						border: 0.1rem solid transparent;
-						&:hover {
-							border-color: #00b4d8;
+						&:hover{
+							text-decoration: underline;
 						}
 					}
 				}

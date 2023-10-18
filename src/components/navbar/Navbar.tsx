@@ -2,7 +2,7 @@
 import styles from './styles.module.scss';
 import Link from 'next/link';
 import { navigation } from '@/utils/navigation';
-import logo from '@/app/assets/logo.jpeg';
+import logo from '@/app/assets/logo.png';
 import React from 'react';
 import Image from 'next/image';
 import burger from '@/app/assets/svg/burger.svg';
@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
 					<Link href={'/'} className={`${styles.logo}`}>
 						<Image src={logo} alt={'nonhigh'} />
 					</Link>
-					<input type='checkbox' id='toggle' className={styles.toggle}/>
+					<input type='checkbox' id='toggle' className={styles.toggle} />
 					<label htmlFor='toggle' className={`${styles.icons}`}>
 						<Image
 							src={burger}
@@ -24,7 +24,11 @@ const Navbar: React.FC = () => {
 							className={`${styles.burgerO}`}
 							id='open'
 						/>
-						<Image src={xmark} alt='icon-burger' className={`${styles.burgerX}`} />
+						<Image
+							src={xmark}
+							alt='icon-burger'
+							className={`${styles.burgerX}`}
+						/>
 					</label>
 
 					<ul className={`${styles.NavLinks}`}>

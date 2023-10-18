@@ -1,5 +1,9 @@
 @import '@/styles/mixins.scss';
 
+.body{
+	padding: 0.5rem 0rem;
+}
+
 @include sm {
 	.CardProject {
 		header {
@@ -8,9 +12,16 @@
 		&__img {
 			margin-bottom: 1rem;
 		}
-		hr {
-			display: flex;
-			flex-direction: column;
+		section {
+			h4 {
+				margin: auto;
+				margin-left: 1rem;
+			}
+			p{
+				display: flex;
+				flex-direction: column;
+				max-width: 300px;
+			}
 		}
 	}
 }
@@ -26,22 +37,16 @@
 				height: auto;
 			}
 		}
-		hr {
-			display: none;
-		}
 
 		section {
 			h4 {
-				a {
-					&:hover {
-						text-decoration: underline;
-					}
-				}
+				margin: auto;
+				margin-left: 1rem;
 			}
 			p{
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.5s ease;
+				display: flex;
+				flex-direction: column;
+				max-width: 300px;
 			}
 		}
 		section.open{

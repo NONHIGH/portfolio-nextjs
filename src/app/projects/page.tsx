@@ -1,20 +1,17 @@
-import ProjectsContainer from '@/components/projects/ProjectsContainer'
-import React from 'react'
+import ProjectsContainer from '@/components/projects/ProjectsContainer';
+import React from 'react';
 
-type Props = {
-    
-}
+type Props = {};
 
-const page = (props: Props) => {
-  return (
-    <>
-        <main>
-            <h1 className='text-center underline'>Proyectos</h1>
-            <h2 className='text-center'>holi</h2>
-            <ProjectsContainer/>
-        </main>
-    </>
-  )
-}
+const page: React.FC<Props> = ({}) => {
+	return (
+		<>
+			<main>
+				<h1 className='text-center underline pb-5'>Proyectos</h1>
+				<ProjectsContainer />
+			</main>
+		</>
+	);
+};
 
-export default page
+export default page;

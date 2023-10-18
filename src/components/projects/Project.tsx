@@ -18,8 +18,6 @@ const Project: React.FC<Props> = ({ project }) => {
 		console.log(open, 'stado ');
 		console.log(styles);
 		console.log(project.id);
-		
-		
 	};
 	return (
 		<>
@@ -27,7 +25,7 @@ const Project: React.FC<Props> = ({ project }) => {
 				<CardHeader>
 					<h3 className='text-center'>{project.name}</h3>
 				</CardHeader>
-				<CardBody>
+				<CardBody className={`${styles.body}`}>
 					<div className={styles.CardProject__img}>
 						<Image
 							alt={project.presentationImage}
@@ -36,17 +34,10 @@ const Project: React.FC<Props> = ({ project }) => {
 							height={4000}
 						/>
 					</div>
-					<hr />
 
-					<section className={open ? `${styles.open}` : ``}>
-						<h4>
-							<a href={`#${project.id}`} onClick={toggle}>
-								Descripción
-							</a>
-						</h4>
-						<p id={`${project.id}`} className={open ? styles.open : ''}>
-							{project.description} holi
-						</p>
+					<section>
+						<h4>Descripción:</h4>
+						<p>{project.description}</p>
 					</section>
 				</CardBody>
 			</Card>

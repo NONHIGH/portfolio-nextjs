@@ -1,11 +1,10 @@
-import About from "@/components/about/About";
-import CardFooter from "@/components/card/card-footer/CardFooter";
+import About from '@/components/about/About';
 const page = () => {
-  return (
-    <>
-    <About/>
-    </>
-  )
-}
+	return (
+		<>
+			<About />
+		</>
+	);
+};
 
-export default page
+export default page;

@@ -21,7 +21,7 @@ const ProjectsContainer: React.FC<Props> = () => {
 		<>
 			<Card>
 				<CardHeader>
-					<h1 className='font-bold text-center'>Soy el titulo de los proyectos</h1>
+					<h1 className='font-bold text-center'>Mi trayectoria</h1>
 				</CardHeader>
 				<CardBody className={styles.Projects}>
 					{simu.map((project) => {
