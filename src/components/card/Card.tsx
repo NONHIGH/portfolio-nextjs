@@ -1,10 +1,10 @@
 import './card-styles.scss';
-import { PropsComponent } from '@/utils/interfaces/component';
+import { PropsComponent } from '@/utils/interfaces-types/component';
 
 const Card: React.FC<PropsComponent> = ({ children, className }) => {
 	return (
 		<>
-			<section className={`Card-Container ${className}`}>{children}</section>
+			<div className={`Card-Container ${className}`}>{children}</div>
 		</>
 	);
 };

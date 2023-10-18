@@ -1,0 +1,14 @@
+@import '@/styles/mixins.scss';
+
+.Projects {
+	display: flex;
+    justify-content: space-around;
+	flex-wrap: wrap;
+    gap: 5rem;
+}
+
+@include sm{
+    .Projects{
+        gap: 1.45rem;
+    }
+}

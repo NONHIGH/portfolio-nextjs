@@ -2,6 +2,9 @@
 const nextConfig = {
     eslint: {
         dirs: ['pages', 'components', 'utils']
+    },
+    images: {
+        domains: ['images.unsplash.com']
     }
 }
 

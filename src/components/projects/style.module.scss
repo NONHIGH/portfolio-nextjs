@@ -1,0 +1,53 @@
+@import '@/styles/mixins.scss';
+
+@include sm {
+	.CardProject {
+		header {
+			text-transform: capitalize;
+		}
+		&__img {
+			margin-bottom: 1rem;
+		}
+		hr {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+@include lg {
+	.CardProject {
+		width: 450px;
+
+		&__img {
+			height: auto;
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		hr {
+			display: none;
+		}
+
+		section {
+			h4 {
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			p{
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.5s ease;
+			}
+		}
+		section.open{
+			p{
+				max-height: 1000px;
+			}
+		}
+	}
+}

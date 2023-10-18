@@ -1,4 +1,4 @@
-import { Routes } from './interfaces/route-navigation';
+import { Routes } from './interfaces-types/route-navigation';
 
 export const navigation: Routes = [
 	// { label: `Home`, path: '/' },
