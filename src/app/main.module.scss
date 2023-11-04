@@ -1,0 +1,27 @@
+@import "../styles/base.scss";
+
+@mixin principal {
+    .Section1, .Section2{
+        min-width: 100%;
+        min-height: 46.875rem;
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+@include lg {
+    @include principal();
+}
+@include md {
+    @include principal()
+}
+@include sm {
+    @include principal() 
+}
+
+.Section1 {
+    background: linear-gradient(to bottom, $gradient-1, $gradient-2);
+}
+.Section2 {
+    background-color: $secondary;
+}

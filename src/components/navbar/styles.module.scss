@@ -1,7 +1,7 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/base.scss";
 
 .Header {
-	background-color: #081445;
+	background-color: $black-1;
 	color: #dcdede;
 }
 
@@ -27,7 +27,6 @@
 	.Header {
 		font-size: 1rem;
 		padding: 1rem;
-		border-bottom: #03045e solid 2px;
 		.Navbar {
 			
 			.icons {
@@ -58,27 +57,23 @@
 				top: 7rem;
 				display: grid;
 				place-items: center;
-				background-color: #081445;
-
+				background-color: $black-1;
 				height: 0;
 				overflow: hidden;
 				transition: 0.4s ease;
 				transform: translateY(0%);
-
-				border-top: 2px solid rgba($color: rgba(2, 90, 255, 0.998), $alpha: 1);
-				border-bottom: 2px solid rgba($color: rgba(2, 90, 255, 0.998), $alpha: 1);
 				li {
 					display: flex;
 					width: 100%;
 					height: 100%;
 					justify-content: center;
-					border-bottom: 1px solid
-						rgba($color: rgba(2, 90, 255, 0.998), $alpha: 1);
+					border: solid #111539 1px;
 					a {
 						width: 100%;
 						height: 100%;
-						text-align: center;
-						padding: 3%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 						&:hover {
 							color: #ffffff;
 						}
@@ -131,7 +126,7 @@
 	.Header {
 		font-size: 1rem;
 		padding: 1rem;
-
+		transition: fade-down 0.5s;
 		.Navbar {
 			.logo {
 				width: 6.75rem;

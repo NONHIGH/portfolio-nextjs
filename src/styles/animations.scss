@@ -1,0 +1,11 @@
+@keyframes fade-down {
+    0% {
+        opacity : 0;
+        transform: translateY(-30px) scale(0.9999);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px) scale(1);
+    }
+}
