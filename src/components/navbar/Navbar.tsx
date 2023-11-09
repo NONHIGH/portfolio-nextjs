@@ -1,12 +1,11 @@
-'use client';
 import styles from './styles.module.scss';
 import Link from 'next/link';
 import { navigation } from '@/utils/navigation';
-import logo from '@/app/assets/logo.png';
+import logo from '@/assets/logo.png';
 import React from 'react';
 import Image from 'next/image';
-import burger from '@/app/assets/svg/burger.svg';
-import xmark from '@/app/assets/svg/x-mark.svg';
+import burger from '@/assets/svg/burger.svg';
+import xmark from '@/assets/svg/x-mark.svg';
 
 const Navbar: React.FC = () => {
 	return (
@@ -14,7 +13,7 @@ const Navbar: React.FC = () => {
 			<header className={`${styles.Header}`}>
 				<nav className={`${styles.Navbar}`}>
 					<Link href={'/'} className={`${styles.logo}`}>
-						<Image src={logo} alt={'nonhigh'} />
+						<Image src={logo} alt={'nonhigh'} priority={true} />
 					</Link>
 					<input type='checkbox' id='toggle' className={styles.toggle} />
 					<label htmlFor='toggle' className={`${styles.icons}`}>

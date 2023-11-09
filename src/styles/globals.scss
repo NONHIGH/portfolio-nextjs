@@ -1,6 +1,9 @@
+@import "base.scss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 $base-font-size: 16px;
 @font-face {
@@ -209,4 +212,24 @@ template {
 
 [hidden] {
 	display: none;
+}
+
+*::selection {
+	background: #000000;
+}
+
+::-webkit-scrollbar {
+	width: .5rem;
+	background: rgb(52, 50, 50);
+	
+}
+
+::-webkit-scrollbar-button{
+	background: $black-1
+
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, $gradient-1, $gradient-2);
+
 }

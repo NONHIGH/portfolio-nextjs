@@ -1,0 +1,106 @@
+@import '../../styles/base.scss';
+
+@keyframes dynamicText {
+    0%{
+        color: #ffa200;
+    }
+    50%{
+        color: #ebe8e3;
+    }
+    100%{
+        color: #ffa200;
+    }
+}
+
+@mixin similar-banner ($max-w, $min-w, $height) {
+    .Banner {
+        width: 100%;
+        &__content {
+            background-image: url('../../assets/banner.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            aspect-ratio: 16/5;
+            max-width: $max-w;
+            min-width: $min-w;
+            width: auto;
+            height: $height;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__title {
+                font-size: 3rem;
+                padding: 1rem;
+                border-radius: .5rem;
+                margin: 100px;
+                text-decoration: dashed;
+                animation: dynamicText 3s infinite;
+                background: $black-1;
+
+            }
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100px;
+                width: auto;
+                max-width: 400px;
+                aspect-ratio: 1/1;
+                filter: drop-shadow(16px 16px 20px rgb(25, 32, 127)) invert(5%);
+            }
+        }
+    }
+}
+
+@include lg {
+    @include similar-banner(100%, 100%, 100vh);
+    .Banner {
+        &__content {
+
+            img{
+                left: 100px;
+                top: 100px;
+                width: 250px;
+            }
+        }
+    }
+}
+
+@include md {
+    @include similar-banner(100%, 100%, 100vh);
+    .Banner {
+        &__content{
+            flex-direction: row;
+            img{
+                width: 200px;
+                top: 100px;
+                left: 100px;
+            }
+            &__title{
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+@include sm {
+    @include similar-banner(100%, 100%, 100vh);
+    .Banner{
+        &__content{
+            justify-content: end;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            img{
+                position: relative;
+                width: 50%;
+            }
+        }
+    }
+
+    
+}
+
+

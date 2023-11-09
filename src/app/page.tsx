@@ -1,29 +1,20 @@
 import Card from "@/components/card/Card";
-import CardBody from '../components/card/card-body/CardBody';
-import CardHeader from "@/components/card/card-header/CardHeader";
-import CardFooter from "@/components/card/card-footer/CardFooter";
-
-
-
+import CardBody from '@/components/card/card-body/CardBody';
+import styles from './main.module.scss';
+import Section1 from "@/components/static-content/Section1";
+import Section2 from "@/components/static-content/Section2";
 export default function Home() {
   return (
-    <main>
-      <h1>Este es un h1</h1>
-      <Card>
-        <CardHeader className="text-center">
-          <h1>holi</h1>
-        </CardHeader>
+    <main className={styles.Main}>
+      <Card className={styles.Section1}>
         <CardBody>
-          <h2>Holi</h2>
-          <div>
-            somos la riata
-          </div>
-          <br />
-          <p>noni <b><i>holi</i></b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sed provident necessitatibus voluptatibus ipsam assumenda officia pariatur facilis esse unde illo, consequatur est, omnis voluptatem, enim amet voluptatum odio quidem!</p>
+          <Section1 />
         </CardBody>
-        <CardFooter>
-          holi
-        </CardFooter>
+      </Card>
+      <Card className={styles.Section2}>
+        <CardBody >
+          <Section2/>
+        </CardBody>
       </Card>
 
     </main>
