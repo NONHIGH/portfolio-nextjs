@@ -11,17 +11,6 @@
 
 .Card-Body {
 	position: relative;
-	padding: 0.5rem 1rem;
-}
-@include sm {
-	.Card-Body {
-		padding: 0;
-	}
-}
-@include md {
-	.Card-Body {
-		padding: 0;
-	}
 }
 
 .Card-Header,

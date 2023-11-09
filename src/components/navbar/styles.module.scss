@@ -54,7 +54,7 @@
 				right: 0;
 				left: 0;
 				bottom: 0;
-				top: 7rem;
+				top: 6rem;
 				display: grid;
 				place-items: center;
 				background-color: $black-1;
@@ -92,11 +92,14 @@
 
 @include md {
 	.Header {
-		font-size: 1rem;
+		height: 5rem;
+
+		font-size: .7rem;
+
 		padding: 1rem;
 		.Navbar {
 			.logo {
-				width: 100px;
+				width: 3.75rem;
 			}
 			display: flex;
 			justify-content: space-between;
@@ -124,12 +127,12 @@
 
 @include lg {
 	.Header {
-		font-size: 1rem;
+		font-size: .7rem;
+		height: 5rem;
 		padding: 1rem;
-		transition: fade-down 0.5s;
 		.Navbar {
 			.logo {
-				width: 6.75rem;
+				width: 3.75rem;
 			}
 			display: flex;
 			justify-content: space-between;

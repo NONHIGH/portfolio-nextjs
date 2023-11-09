@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import Icons from '@/assets/svg-tsx';
+import Icons from '@/assets/svg-tsx/svg-tsx';
 import Link from 'next/link';
 type Props = {};
 

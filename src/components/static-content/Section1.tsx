@@ -1,24 +1,25 @@
 import Image from 'next/image';
 import styles from './styles.module.scss';
-// import banner from '@/'
+import logo from '@/assets/logo.png';
 
-type Props = {}
+type Props = {};
 
-const Section1 = (props: Props) => {
-  return (
-    <section className={styles.Banner}>
-        <h2 className={styles.Banner__title}>dhid</h2>
-        <div className={styles.Banner__image}></div>
-        {/* <Image src={} /> */}
-        <div className={styles.Banner__Content}>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minus, veniam quas itaque repellendus facilis sequi est ut perferendis eius provident saepe reprehenderit repudiandae sed praesentium, perspiciatis ullam, consectetur autem?
-                Fuga distinctio tenetur, molestiae sapiente pariatur amet iure alias praesentium voluptates unde voluptas ex laboriosam in nostrum ipsum rem omnis corporis quos? Nobis assumenda vel animi fuga obcaecati aliquid temporibus!
-                Sit cumque earum asperiores totam nihil ut dolor laborum quas modi doloremque aliquam, eveniet ipsum. Hic blanditiis dignissimos sed error totam ratione non quas quibusdam, distinctio saepe possimus temporibus quasi.
-            </p>
-        </div>
-    </section>
-  )
-}
+const Section1: React.FC<Props> = () => {
+	return (
+		<section className={styles.Banner}>
+			<div className={styles.Banner__content}>
+				<h1 className={styles.Banner__content__title}>
+					Desarrollador full stack
+				</h1>
+				<Image
+					src={logo}
+					width={100}
+					height={100}
+					alt={'logo'}
+					priority={true}></Image>
+			</div>
+		</section>
+	);
+};
 
-export default Section1
+export default Section1;
