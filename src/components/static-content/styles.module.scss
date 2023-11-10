@@ -14,6 +14,7 @@
 
 @mixin similar-banner ($max-w, $min-w, $height) {
     .Banner {
+        animation: 2s fade-down;
         width: 100%;
         &__content {
             background-image: url('../../assets/banner.jpg');
@@ -49,6 +50,26 @@
                 aspect-ratio: 1/1;
                 filter: drop-shadow(16px 16px 20px rgb(25, 32, 127)) invert(5%);
             }
+            &__tecnologies {
+                display: flex;
+                text-align: center;
+                svg{
+                transition: .5s;
+                    &:hover{
+                        transform: scale(.82);
+                    }
+                    &:not(:hover){
+                        animation: 2s fade-down;
+                    }
+                }
+                span{
+                -webkit-text-fill-color: transparent;
+                background: linear-gradient(to right, $secondary, $gold-1, $secondary, $secondary);
+                -webkit-background-clip: text;
+                background-clip: text;
+                
+                }
+            }
         }
     }
 }
@@ -71,7 +92,6 @@
     @include similar-banner(100%, 100%, 100vh);
     .Banner {
         &__content{
-            flex-direction: row;
             img{
                 width: 200px;
                 top: 100px;
@@ -79,6 +99,9 @@
             }
             &__title{
                 margin: 0;
+            }
+            &__tecnologies {
+                margin-top: 10%;
             }
         }
     }
