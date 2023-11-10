@@ -6,6 +6,6 @@ export const navigation: Routes = [
 	{ label: `Proyectos`, path: '/projects' },
 	{
 		label: `CV`,
-		path: 'https://www.dropbox.com/scl/fi/8maxbw8rivwwb818roji9/Cv-LuisRomanAngelBryan.pdf?rlkey=d41piuea3esi5ev2vns89eow1&dl=0',
+		path: 'https://www.dropbox.com/scl/fi/h3fnnuxvqcgb7bstj7zmt/CV-Angel-Bryan-Luis-Roman.pdf?rlkey=rlay5xhv1vqvhusf1xzn2ey52&dl=0',
 	},
 ];
