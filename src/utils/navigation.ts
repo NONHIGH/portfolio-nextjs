@@ -1,7 +1,7 @@
 import { Routes } from './interfaces-types/route-navigation';
 
 export const navigation: Routes = [
-	// { label: `Home`, path: '/' },
+	{ label: `Home`, path: '/' },
 	{ label: `Sobre mí`, path: '/about' },
 	{ label: `Proyectos`, path: '/projects' },
 	{
