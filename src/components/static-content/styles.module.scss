@@ -1,129 +1,174 @@
 @import '../../styles/base.scss';
 
 @keyframes dynamicText {
-    0%{
-        color: #ffa200;
-    }
-    50%{
-        color: #ebe8e3;
-    }
-    100%{
-        color: #ffa200;
-    }
+	0% {
+		color: #ffa200;
+	}
+	50% {
+		color: #ebe8e3;
+	}
+	100% {
+		color: #ffa200;
+	}
 }
 
-@mixin similar-banner ($max-w, $min-w, $height) {
-    .Banner {
-        animation: 2s fade-down;
-        width: 100%;
-        &__content {
-            background-image: url('../../assets/banner.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            aspect-ratio: 16/5;
-            max-width: $max-w;
-            min-width: $min-w;
-            width: auto;
-            height: $height;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            &__title {
-                font-size: 3rem;
-                padding: 1rem;
-                border-radius: .5rem;
-                margin: 100px;
-                text-decoration: dashed;
-                animation: dynamicText 3s infinite;
-                background: $black-1;
+/*
+    * Styles section1;
+*/
 
-            }
-            img{
-                position: absolute;
-                top: 0;
-                left: 0;
-                min-width: 100px;
-                width: auto;
-                max-width: 400px;
-                aspect-ratio: 1/1;
-                filter: drop-shadow(16px 16px 20px rgb(25, 32, 127)) invert(5%);
-            }
-            &__tecnologies {
-                display: flex;
-                text-align: center;
-                svg{
-                transition: .5s;
-                    &:hover{
-                        transform: scale(.82);
-                    }
-                    &:not(:hover){
-                        animation: 2s fade-down;
-                    }
-                }
-                span{
-                -webkit-text-fill-color: transparent;
-                background: linear-gradient(to right, $secondary, $gold-1, $secondary, $secondary);
-                -webkit-background-clip: text;
-                background-clip: text;
-                
-                }
-            }
-        }
-    }
+@mixin similar-banner($max-w, $min-w, $height) {
+	.Banner {
+		animation: 2s fade-down;
+		width: 100%;
+		&__content {
+			background-image: url('../../assets/banner.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			aspect-ratio: 16/5;
+			max-width: $max-w;
+			min-width: $min-w;
+			width: auto;
+			height: $height;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&__title {
+				font-size: 3rem;
+				padding: 1rem;
+				border-radius: 0.5rem;
+				margin: 100px;
+				text-decoration: dashed;
+				animation: dynamicText 3s infinite;
+				background: $black-1;
+			}
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-width: 100px;
+				width: auto;
+				max-width: 400px;
+				aspect-ratio: 1/1;
+				filter: drop-shadow(16px 16px 20px rgb(25, 32, 127)) invert(5%);
+			}
+			&__tecnologies {
+				display: flex;
+				text-align: center;
+				svg {
+					transition: 0.5s;
+					&:hover {
+						transform: scale(0.82);
+					}
+					&:not(:hover) {
+						animation: 2s fade-down;
+					}
+				}
+				span {
+					-webkit-text-fill-color: transparent;
+					background: linear-gradient(
+						to right,
+						$secondary,
+						$gold-1,
+						$secondary,
+						$secondary
+					);
+					-webkit-background-clip: text;
+					background-clip: text;
+				}
+			}
+		}
+	}
 }
 
 @include lg {
-    @include similar-banner(100%, 100%, 100vh);
-    .Banner {
-        &__content {
-
-            img{
-                left: 100px;
-                top: 100px;
-                width: 250px;
-            }
-        }
-    }
+	@include similar-banner(100%, 100%, 100vh);
+	.Banner {
+		&__content {
+			img {
+				left: 100px;
+				top: 100px;
+				width: 250px;
+			}
+		}
+	}
 }
 
 @include md {
-    @include similar-banner(100%, 100%, 100vh);
-    .Banner {
-        &__content{
-            img{
-                width: 200px;
-                top: 100px;
-                left: 100px;
-            }
-            &__title{
-                margin: 0;
-            }
-            &__tecnologies {
-                margin-top: 10%;
-            }
-        }
-    }
-
+	@include similar-banner(100%, 100%, 100vh);
+	.Banner {
+		&__content {
+			img {
+				width: 200px;
+				top: 100px;
+				left: 100px;
+			}
+			&__title {
+				margin: 0;
+			}
+			&__tecnologies {
+				margin-top: 10%;
+			}
+		}
+	}
 }
 
 @include sm {
-    @include similar-banner(100%, 100%, 100vh);
-    .Banner{
-        &__content{
-            justify-content: end;
-            flex-direction: column-reverse;
-            align-items: center;
-            text-align: center;
-            img{
-                position: relative;
-                width: 50%;
-            }
-        }
-    }
-
-    
+	@include similar-banner(100%, 100%, 100vh);
+	.Banner {
+		&__content {
+			justify-content: end;
+			flex-direction: column-reverse;
+			align-items: center;
+			text-align: center;
+			img {
+				position: relative;
+				width: 50%;
+			}
+		}
+	}
 }
 
+/*
+    * Styles section2;
+*/
 
+@mixin sections {
+	.SectionContainer {
+		min-width: 100%;
+		max-width: 100vw;
+		min-height: 100vh;
+		height: auto;
+		padding: 3%;
+		display: flex;
+		color: $gold-1;
+		&__sections {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			gap: 3rem;
+			&__education, &__experience {
+				&__item {
+					background-color: rgba(95, 51, 51, 0.412);
+					display: flex;
+					margin: 2rem;
+					max-width: 40%;
+					min-width: 30%;
+				}
+			}
+		}
+	}
+}
+
+@include lg {
+	@include sections();
+}
+
+@include md {
+	@include sections();
+}
+
+@include sm {
+	@include sections();
+}

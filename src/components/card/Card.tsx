@@ -4,7 +4,9 @@ import { PropsComponent } from '@/utils/interfaces-types/component';
 const Card: React.FC<PropsComponent> = ({ children, className }) => {
 	return (
 		<>
-			<div className={`Card-Container ${className}`}>{children}</div>
+			<div className={`Card-Container ${className ? className : ''}`}>
+				{children}
+			</div>
 		</>
 	);
 };
