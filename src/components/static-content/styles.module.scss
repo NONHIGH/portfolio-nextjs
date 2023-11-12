@@ -148,7 +148,7 @@
 			width: 100%;
 			flex-direction: column;
 			gap: 3rem;
-			&__education, &__experience {
+			&__experience, &__education {
 				&__item {
 					background-color: rgba(95, 51, 51, 0.412);
 					display: flex;
@@ -171,4 +171,14 @@
 
 @include sm {
 	@include sections();
+	.SectionContainer {
+		&__sections {
+			&__experience, &__education {
+				&__item {
+					max-width: none;
+
+				}
+			}
+		}
+	}
 }
