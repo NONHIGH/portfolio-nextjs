@@ -19,15 +19,15 @@ export const experiences: experience[] = [
 
 export const educations: education[] = [
 	{
-		institution: 'Argentina programa 4.0',
-		title: 'Full stack developer',
-		start: new Date(2023, 5),
-		end: new Date(2023, 4),
-	},
-	{
 		institution: 'Soy Henry',
 		title: 'Full Stack developer',
 		start: new Date(2023, 5),
 		end: new Date(2023, 8),
+	},
+	{
+		institution: 'Argentina programa 4.0',
+		title: 'Full stack developer',
+		start: new Date(2023, 5),
+		end: new Date(2023, 4),
 	},
 ];
