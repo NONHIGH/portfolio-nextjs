@@ -20,7 +20,7 @@ export default function RootLayout({
 	return (
 		<html lang='es'>
 			<head>
-				<link rel='icon' href='/public/logo.jpeg' type='image' />
+				<link rel='icon' href='../assets/images/logo.jpeg' type='image' />
 			</head>
 			<body className={inter.className}>
 				<header>

@@ -21,7 +21,7 @@
 		animation: 2s fade-down;
 		width: 100%;
 		&__content {
-			background-image: url('../../assets/banner.jpg');
+			background-image: url('../../assets/images/banner.jpg');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-attachment: fixed;
@@ -66,16 +66,7 @@
 					}
 				}
 				span {
-					-webkit-text-fill-color: transparent;
-					background: linear-gradient(
-						to right,
-						$secondary,
-						$gold-1,
-						$secondary,
-						$secondary
-					);
-					-webkit-background-clip: text;
-					background-clip: text;
+					color: rgb(31, 27, 144);
 				}
 			}
 		}
