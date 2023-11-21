@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './styles.module.scss';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/images/logo.png';
 import tecnologies from '@/assets/svg-tsx/tecnologies';
 import React from 'react';
 import Link from 'next/link';

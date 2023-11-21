@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import Link from 'next/link';
 import { navigation } from '@/utils/navigation';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/images/logo.png';
 import React from 'react';
 import Image from 'next/image';
 import burger from '@/assets/svg/burger.svg';

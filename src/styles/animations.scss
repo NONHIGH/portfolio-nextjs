@@ -9,3 +9,29 @@
         transform: translate(0px) scale(1);
     }
 }
+@keyframes fade-up {
+    0% {
+        opacity : 0;
+        transform: translateY(30px) scale(0.9999);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px) scale(1);
+    }
+}
+
+@keyframes fade-down-glow {
+    0% {
+        opacity : 0;
+        transform: translateY(30px) scale(0.9999);
+        filter: blur(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px) scale(1);
+        filter: blur(0px);
+
+    }
+}

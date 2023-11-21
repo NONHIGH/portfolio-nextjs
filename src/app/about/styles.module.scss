@@ -1,0 +1,64 @@
+@import '../../styles//base.scss';
+
+@mixin about-styles() {
+	.Main {
+        padding: .5rem;
+		background: linear-gradient($black-1, $gradient-1, $gradient-2);
+		min-height: 100vh;
+        height: auto;
+		width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "header header header"
+            "image info info"
+            "image info info"
+            "image info info"
+        ;
+        &_header{
+            grid-area: header;
+            margin-top: 1rem;
+            h1{
+                color: #eaf1db8c;
+            }
+        }
+        &_sectionImage {
+            grid-area: image;
+            height: auto;
+            max-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            img {
+                width: 100%;
+                border-radius: 300rem;
+                animation: 2s fade-down-glow;
+            }
+        }
+
+        &_section {
+            grid-area: info;
+            height: 100%;
+            animation: 2s fade-up;
+        }
+	}
+}
+
+
+@include sm (){
+    @include about-styles();
+    
+}
+
+@include md (){
+    @include about-styles();
+    
+}
+
+@include lg (){
+    @include about-styles();
+
+}
