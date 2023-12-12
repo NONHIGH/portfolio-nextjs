@@ -16,8 +16,11 @@
             "image info info"
             "image info info"
         ;
+        gap: 3rem;
         &_header{
             grid-area: header;
+            top: 0;
+            // position: sticky;
             margin-top: 1rem;
             h1{
                 color: #eaf1db8c;
@@ -34,7 +37,7 @@
             top: 0;
             img {
                 width: 100%;
-                border-radius: 300rem;
+                border-radius: 2rem;
                 animation: 2s fade-down-glow;
             }
         }

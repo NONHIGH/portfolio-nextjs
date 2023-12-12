@@ -16,8 +16,8 @@ const Section1: React.FC<Props> = () => {
 				</h1>
 				<Image
 					src={logo}
-					width={100}
-					height={100}
+					width={10000}
+					height={10000}
 					alt={'logo'}
 					priority={true}></Image>
 				<div className={styles.Banner__content__tecnologies}>

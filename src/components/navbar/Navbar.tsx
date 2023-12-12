@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
 			<header className={`${styles.Header}`}>
 				<nav className={`${styles.Navbar}`}>
 					<Link href={'/'} className={`${styles.logo}`}>
-						<Image src={logo} alt={'nonhigh'} priority={true} />
+						<Image src={logo} alt={'nonhigh'} width={1000} height={1000} priority={true} />
 					</Link>
 					<input type='checkbox' id='toggle' className={styles.toggle} />
 					<label htmlFor='toggle' className={`${styles.icons}`}>

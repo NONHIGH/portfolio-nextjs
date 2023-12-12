@@ -3,6 +3,9 @@
 .Header {
 	background-color: $black-1;
 	color: #dcdede;
+	position: sticky;
+		top: 0;
+		z-index: 100000000;
 }
 
 .toggle {
@@ -25,6 +28,7 @@
 }
 @include sm {
 	.Header {
+		
 		font-size: 1rem;
 		padding: 1rem;
 		.Navbar {
@@ -93,11 +97,10 @@
 @include md {
 	.Header {
 		height: 5rem;
-
 		font-size: .7rem;
-
 		padding: 1rem;
 		.Navbar {
+			
 			.logo {
 				width: 3.75rem;
 			}

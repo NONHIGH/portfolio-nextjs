@@ -66,7 +66,10 @@
 					}
 				}
 				span {
-					color: rgb(31, 27, 144);
+					color: rgb(0, 0, 0);
+					&:hover{
+						color: $text-by-background;
+					}
 				}
 			}
 		}

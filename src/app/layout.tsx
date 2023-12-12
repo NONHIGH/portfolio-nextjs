@@ -22,10 +22,8 @@ export default function RootLayout({
 			<head>
 				<link rel='icon' href='../assets/images/logo.jpeg' type='image' />
 			</head>
-			<body className={inter.className}>
-				<header>
+			<body className={inter.className} style={{position: "relative"}}>
 					<Navbar />
-				</header>
 				{children}
 				<Footer />
 			</body>
